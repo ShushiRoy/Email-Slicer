@@ -4,7 +4,7 @@ import re
     
 try:
     #Main connection to the database
-    connection = psycopg2.connect(user = "postgres",password = "password",host = "127.0.0.1",port = "15432", database = "Email Slicer")
+    connection = psycopg2.connect(user = "YOUR USERNAME",password = "YOUR PASSWORD",host = "YOUR HOST IP ADDRESS",port = "YOUR PORT NUMBER", database = "YOUR DATABASE NAME")
     cursor = connection.cursor()
 
 
