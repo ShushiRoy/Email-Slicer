@@ -8,15 +8,18 @@ try:
     cursor = connection.cursor()
 
 
-    #User Input for an email
+    #Checks if user wants to see the list in the table, or if they wish to enter a new email to add to the list
     user= str(input("Please state if you want to enter an email (type 'email') or see the entire list (type 'list'): "))
 
+    #Shows the entire list in the table
     if user=='list':
         cursor.execute("select * from information")
         result = cursor.fetchall()
         for row in result:
             print("Username =", row[0], )
             print("Domain =", row[1], "\n")
+
+    #User enters a new email address to add to the list        
     elif user == 'email':        
         email= str(input("Please enter your email address: "))
 
